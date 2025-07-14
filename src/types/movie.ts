@@ -14,9 +14,3 @@ export interface Movie {
   release_date: string;
   vote_average: number;
 }
-export interface MoviesHttpResponse {
-  results: Movie[];
-  page: number;
-  total_pages: number;
-  total_results: number;
-}

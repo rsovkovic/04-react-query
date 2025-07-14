@@ -2,13 +2,13 @@ import css from "./MovieModal.module.css";
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Movie } from "../../types/movie";
-interface ModalProps {
+interface MovieModalProps {
   movie: Movie;
   onClose: () => void;
   // children: React.ReactNode;
 }
 
-export default function MovieModal({ movie, onClose }: ModalProps) {
+export default function MovieModal({ movie, onClose }: MovieModalProps) {
   const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
       onClose();
