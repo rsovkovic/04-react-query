@@ -11,12 +11,7 @@ import { fetchMovies } from "../../services/movieService";
 import { toast, Toaster } from "react-hot-toast";
 import ReactPaginate from "react-paginate";
 
-// import axios from "axios";
-
 export default function App() {
-  // const [movies, setMovies] = useState<Movie[]>([]);
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [isError, setIsError] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -35,20 +30,6 @@ export default function App() {
   const handleSearch = async (topic: string) => {
     setSearchQuery(topic);
     setCurrentPage(1);
-    // setIsLoading(true);
-    // setIsError(false);
-    // try {
-    // const results = await fetchMovies(topic, 1);
-    // if ( data?.results.length === 0) {
-    //   toast.error("No movies found for your request.");
-    // }
-
-    //   setMovies(results);
-    // } catch {
-    //   setIsError(true);
-    // } finally {
-    //   setIsLoading(false);
-    // }
   };
 
   const handleSelect = (movie: Movie) => {
@@ -80,9 +61,7 @@ export default function App() {
       {isSuccess && data.results.length > 0 && (
         <MovieGrid movies={data.results} onSelect={handleSelect} />
       )}
-      {/* {movies.length > 0 && (
-        <MovieGrid movies={movies} onSelect={handleSelect} />
-      )} */}
+
       {selectedMovie && (
         <MovieModal movie={selectedMovie} onClose={closeModal} />
       )}

@@ -41,17 +41,3 @@ export default function SearchBar({ onSubmit }: SearchFormProps) {
     </header>
   );
 }
-
-// interface SearchFormProps {
-//   onSubmit: (topic: string) => void;
-// }
-// export default function SearchBar({ onSubmit }: SearchFormProps) {
-//   const handleSubmit = (formData: FormData) => {
-//     const query = formData.get("query") as string;
-//     console.log(query);
-//   };
-// export default function SearchBar() {
-//   const handleSubmit = (formData: FormData) => {
-//     const query = formData.get("query") as string;
-//     console.log(query.length);
-//   };
